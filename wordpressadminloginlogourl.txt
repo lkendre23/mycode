@@ -1,0 +1,20 @@
+//Change url of login logo link
+add_filter( 'login_headerurl', 'custom_loginlogo_url');
+
+function custom_loginlogo_url($url) {
+$home_url = home_url('/').'admin';
+return "www.google.com";
+
+}
+
+//to change the admin login logo image
+function my_login_logo_one() { 
+	// Change the url only
+?> 
+<style type="text/css"> 
+body.login div#login h1 a {
+ background-image: url(https://development.ikf.in/clwt/wp-content/themes/clwt/assets/images/logo.png);
+padding-bottom: 30px; 
+} 
+</style>
+ <?php 

@@ -1,0 +1,99 @@
+
+//form validation
+    jQuery(document).ready(()=>{
+      // first name validation
+      let fnamel = jQuery('input[name="your-name"]');
+        jQuery(fnamel).on('focus keyup keydown keypress change',()=>{
+          let fname = jQuery('input[name="your-name"]');
+          let first_name = jQuery('input[name="your-name"]').val();
+          if(first_name.length == "" ){      
+            jQuery('#blank_msg').remove();
+            jQuery(fname).after('<span id="blank_msg">Field should  not blank</span>');
+            jQuery('.your-name #blank_msg').next('.wpcf7-not-valid-tip').fadeOut(); 
+          }
+          if(first_name.length >= 1){           
+            jQuery('.your-name #blank_msg').css('display','none'); 
+            jQuery('.your-name #blank_msg').next('.wpcf7-not-valid-tip').fadeOut();                          
+          }
+      }); 
+
+      // last  name validation  
+      let lnamel = jQuery('input[name="your-lname"]');
+      jQuery(lnamel).on('focus keyup keydown keypress change',()=>{
+        let last_name = jQuery('input[name="your-lname"]').val();
+        let lname = jQuery('input[name="your-lname"]');
+        if(last_name.length == "" ){    
+          jQuery('#blank_msg1').remove();                 
+          jQuery(lname).after('<span id="blank_msg1">Field should  not blank</span>');         
+          jQuery('.your-lname #blank_msg1').next('.wpcf7-not-valid-tip').fadeOut(); 
+        }
+        if(last_name.length >= 1){           
+          jQuery('.your-lname #blank_msg1').css('display','none'); 
+          jQuery('.your-lname #blank_msg1').next('.wpcf7-not-valid-tip').fadeOut();                          
+        }
+      });
+
+      // Email validation 
+      let emaill = jQuery('input[name="your-email"]');
+      jQuery(emaill).on('focus keyup keydown keypress change',()=>{
+        let your_email  = jQuery('input[name="your-email"]').val();
+        let email = jQuery('input[name="your-email"]');
+        if(your_email.length == "" ){    
+          jQuery('#blank_msg_email').remove();                 
+          jQuery(email).after('<span id="blank_msg_email">Field should  not blank</span>');         
+          jQuery('.your-email #blank_msg_email').next('.wpcf7-not-valid-tip').fadeOut(); 
+        }
+        if(your_email.length >= 1){           
+          jQuery('.your-email #blank_msg_email').css('display','none'); 
+          jQuery('.your-email #blank_msg_email').next('.wpcf7-not-valid-tip').fadeOut();                          
+        }
+
+      });
+
+        // Mobile validation  
+      let mobilel = jQuery('input[name="your-mobile"]');
+      jQuery(mobilel).on('focus keyup keydown keypress change',()=>{
+        let your_mobile  = jQuery('input[name="your-mobile"]').val();
+        let mobile = jQuery('input[name="your-mobile"]');
+
+      if(your_mobile.length == "" ){    
+          jQuery('#blank_msg_mobile').remove();                 
+          jQuery(mobile).after('<span id="blank_msg_mobile">Field should  not blank</span>'); 
+          jQuery('.your-mobile #blank_msg_mobile').next('.wpcf7-not-valid-tip').fadeOut();                                  
+        }
+
+        if(your_mobile.length >= 1){           
+          jQuery('.your-mobile #blank_msg_mobile').css('display','none'); 
+          jQuery('.your-mobile #blank_msg_mobile').next('.wpcf7-not-valid-tip').fadeOut();                          
+        }
+
+      });   
+
+        // Company Name validation  
+      let comp1 = jQuery('input[name="your-comp"]');
+      jQuery(comp1).on('focus keyup keydown keypress change',()=>{
+        let your_comp  = jQuery('input[name="your-comp"]').val();
+        let comp = jQuery('input[name="your-comp"]');
+
+      if(your_comp.length == "" ){    
+          jQuery('#blank_msg_comp').remove();                 
+          jQuery(comp).after('<span id="blank_msg_comp">Field should  not blank</span>'); 
+          jQuery('.your-comp #blank_msg_comp').next('.wpcf7-not-valid-tip').fadeOut();                          
+
+        }
+        if(your_comp.length >= 1){           
+          jQuery('.your-comp #blank_msg_comp').css('display','none'); 
+          jQuery('.your-comp #blank_msg_comp').next('.wpcf7-not-valid-tip').fadeOut();                          
+        }
+
+      }); 
+
+    jQuery('#formSubmit').on('click',()=>{    
+      jQuery('.your-lname #blank_msg1').css('display','none'); 
+      jQuery('.your-lname #blank_msg1').css('display','none'); 
+      jQuery('.your-email #blank_msg_email').css('display','none'); 
+      jQuery('.your-mobile #blank_msg_mobile').css('display','none'); 
+      jQuery('.your-comp #blank_msg_comp').css('display','none'); 
+  });
+
+});

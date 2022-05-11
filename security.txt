@@ -1,0 +1,9 @@
+1] change the dir access.
+
+2] change the email id passwords in every months.
+
+3] protect websites admin panels.
+
+4] after login send mail notifications.
+
+5] need teams for chatting purpose remove whatsapp.

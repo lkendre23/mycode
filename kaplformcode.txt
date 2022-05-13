@@ -1,0 +1,12 @@
+<div class="grid-form">
+<div class="row g-15">
+  <div class="col-lg-6">[text* your-name maxlength:50 placeholder "First Name*"]</div>
+  <div class="col-lg-6">[text* your-lname maxlength:50 placeholder "Last Name*"]</div>
+  <div class="col-lg-6">[email* your-email maxlength:50 placeholder "Email*"]</div>
+  <div class="col-lg-6">[tel* your-mobile minlength:8 maxlength:15 placeholder "Phone*"]</div>
+  <div class="col-lg-6">[text* your-comp maxlength:50 placeholder "Company Name*"]</div>
+  <div class="col-lg-6">[snippet country-name]</div>
+  <div class="col-lg-12">[textarea your-message x3 maxlength:250 placeholder "Message"]</div>
+  <div class="col-lg-12"><span class="submtbtn">[submit id:formSubmit "Send" ]</span></div>
+</div>
+</div>
